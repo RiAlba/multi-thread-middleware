@@ -1,11 +1,9 @@
-<project name="asl-fall16-project" default="jar" basedir=".">
+<project name="multi-thread-middleware" default="jar" basedir=".">
   <description>
-    ANT Build File for ASL Fall 2017 Project
+    ANT Build File for my awesome middleware
   </description>
+  
   <!-- set global properties for this build -->
-
-  <property name="nethzid" value="rialba"/>
-
   <property name="src" location="src"/>
   <property name="build" location="build"/>
   <property name="dist" location="dist"/>
@@ -24,7 +22,7 @@
     <!-- Create the distribution directory -->
     <mkdir dir="${dist}"/>
     <!-- Put everything in ${build} into the jar file -->
-    <jar jarfile="${dist}/middleware-${nethzid}.jar" basedir="${build}" compress="true">
+    <jar jarfile="${dist}/middleware.jar" basedir="${build}" compress="true">
       <fileset dir="${src}" includes="**/*.java"/>
       <manifest>
         <attribute name="Main-Class" value="middleware.RunMW"/>
